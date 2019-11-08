@@ -1,2 +1,0 @@
-# Inhabitent
-Project 3
