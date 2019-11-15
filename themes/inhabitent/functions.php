@@ -43,6 +43,7 @@ function red_starter_setup() {
 endif; // red_starter_setup
 add_action( 'after_setup_theme', 'red_starter_setup' );
 
+
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
  *
@@ -108,3 +109,6 @@ require get_template_directory() . '/inc/template-tags.php';
  * Custom functions that act independently of the theme templates.
  */
 require get_template_directory() . '/inc/extras.php';
+
+
+
