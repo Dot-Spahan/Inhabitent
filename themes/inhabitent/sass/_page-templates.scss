@@ -12,6 +12,8 @@
 
     .content-area {
         flex:1;
+        align-items: center;
+        text-align: center;
 
         width: 75%;
         &.bg-red {
@@ -22,12 +24,62 @@
     .widget-area {
         width: 25%;
     }
-  
+    .product-types {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 30px;
+        grid-row-gap: 0px;
+        align-items: center;
+        text-align: center;
+        padding: 10px;
+        border: solid 1px lightgrey;
+    }
+    
+       
+    }
+    
+    .btn {
+        background-color: #248a83;
+        color: white;
+    }
 
-}
+    .journal {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 30px;
+        grid-row-gap: 0px;
+        align-items: center;
+        text-align: center;
+        padding: 10px;
+    }
 
-.archives-products {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    width: 100%;
+    .adventure-story {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 20px;
+        grid-row-gap: 0px;
+        align-items: center;
+        text-align: center;
+        padding: 30px;
+    }
+
+
+
+.masthead {
+    flex-direction: row;
+    .nav {
+        display: flex;
+        flex:1;
+        align-items: center;
+        text-align: center;
+     
+        }
+        .logo {
+            position: absolute;
+            left: 100px;
+            top: 150px;
+        }
 }

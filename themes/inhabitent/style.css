@@ -241,7 +241,9 @@ textarea {
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
-  clear: both; }
+  clear: both;
+  -ms-flex-line-pack: center;
+      align-content: center; }
 
 /* Copy */
 p {
@@ -420,7 +422,7 @@ textarea {
 --------------------------------------------------------------*/
 /* Links */
 a {
-  color: royalblue; }
+  color: white; }
   a:visited {
     color: purple; }
   a:hover, a:focus, a:active {
@@ -435,7 +437,10 @@ a {
   clear: both;
   display: block;
   float: left;
-  width: 100%; }
+  width: 200px;
+  color: white;
+  -ms-flex-line-pack: justify;
+      align-content: space-between; }
   .main-navigation ul {
     display: none;
     list-style: none;
@@ -678,11 +683,76 @@ object {
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
     width: 75%; }
     .site-content .content-area.bg-red {
       background-color: #ffffff; }
   .site-content .widget-area {
     width: 25%; }
+  .site-content .product-types {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 30px;
+    grid-row-gap: 0px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+    padding: 10px;
+    border: solid 1px lightgrey; }
+
+.btn {
+  background-color: #248a83;
+  color: white; }
+
+.journal {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 30px;
+  grid-row-gap: 0px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  padding: 10px; }
+
+.adventure-story {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 20px;
+  grid-row-gap: 0px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  padding: 30px; }
+
+.masthead {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row; }
+  .masthead .nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center; }
+  .masthead .logo {
+    position: absolute;
+    left: 100px;
+    top: 150px; }
 
 .site-footer {
   background-image: url("../../images/dark-wood.png");
@@ -715,3 +785,10 @@ object {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
+
+.site-info {
+  -ms-flex-line-pack: center;
+      align-content: center;
+  text-align: center;
+  color: white;
+  font-weight: bold; }
