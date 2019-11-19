@@ -3,3 +3,31 @@
 --------------------------------------------------------------*/
 
 /* Front page */
+
+
+.site-content {
+   
+    display:flex;
+  
+
+    .content-area {
+        flex:1;
+
+        width: 75%;
+        &.bg-red {
+            background-color: #ffffff;
+        }
+    }
+
+    .widget-area {
+        width: 25%;
+    }
+  
+
+}
+
+.archives-products {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: 100%;
+}

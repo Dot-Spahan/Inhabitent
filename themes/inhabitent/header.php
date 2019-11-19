@@ -33,19 +33,21 @@
 					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php echo esc_html( 'Primary Menu' ); ?></button>
 					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 				</nav><!-- #site-navigation -->
-			<img src="project-04/images/logos/inhabitent-logo-full.svg" alt="tent logo">
-				
+				<img src="<?php echo get_template_directory_uri(); ?>/images/logos/inhabitent-logo-tent-white.svg" alt="Tent Logo">	
+				<img src="<?php echo get_template_directory_uri(); ?>/images/logos/inhabitent-logo-full.svg" alt="Tent Logo">	
 			</header><!-- #masthead -->
 			
 			
 			<?php // check if the post has a Post Thumbnail assigned to it.
-			if ( has_post_thumbnail() ) {
-				the_post_thumbnail();
-				}
+			// if ( has_post_thumbnail() ) {
+			// 	the_post_thumbnail();
+			// 	}
 				//the_content();
 				?>
 				
 
 
 			<div id="content" class="site-content">
+
+	
 			
