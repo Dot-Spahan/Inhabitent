@@ -234,7 +234,7 @@ input,
 select,
 textarea {
   color: #404040;
-  font-family: sans-serif;
+  font-family: "Merriweather", sans-serif;
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.5; }
@@ -435,14 +435,9 @@ a {
 /* Menus */
 .main-navigation {
   clear: both;
-  display: block;
-  float: left;
-  width: 200px;
   color: white;
-  -ms-flex-line-pack: justify;
-      align-content: space-between; }
+  position: relative; }
   .main-navigation ul {
-    display: none;
     list-style: none;
     margin: 0;
     padding-left: 0; }
@@ -459,7 +454,8 @@ a {
         top: 0; }
       .main-navigation ul ul li:hover > ul,
       .main-navigation ul ul li.focus > ul {
-        left: 100%; }
+        left: 100%;
+        border: 5px solid red; }
       .main-navigation ul ul a {
         width: 200px; }
     .main-navigation ul li:hover > ul,
@@ -675,35 +671,66 @@ object {
 # Page Templates
 --------------------------------------------------------------*/
 /* Front page */
+body {
+  font-family: "Merriweather", sans-serif; }
+
+.site-main {
+  display: block;
+  min-width: 1120px; }
+
 .site-content {
+  min-width: 1120px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
   .site-content .content-area {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+    width: 75%;
     -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    text-align: center;
-    width: 75%; }
+        -ms-flex-positive: 1;
+            flex-grow: 1; }
     .site-content .content-area.bg-red {
-      background-color: #ffffff; }
-  .site-content .widget-area {
-    width: 25%; }
-  .site-content .product-types {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 1fr;
-    grid-column-gap: 30px;
-    grid-row-gap: 0px;
+      background-color: red; }
+    .site-content .content-area .widget-area {
+      width: 25%;
+      background-color: green; }
+  .site-content .logo-image {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    text-align: center;
-    padding: 10px;
-    border: solid 1px lightgrey; }
+    background: url(../../images/home-hero.jpg) no-repeat top;
+    background-size: cover,cover;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 100vh;
+    width: 100%; }
+
+.product-types {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 30px;
+  grid-row-gap: 0px;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  text-align: center;
+  padding: 30px;
+  border: solid 10px orange; }
+  .product-types img {
+    height: auto;
+    width: 100px; }
 
 .btn {
   background-color: #248a83;
@@ -721,7 +748,7 @@ object {
   text-align: center;
   padding: 10px; }
 
-.adventure-story {
+.adventure-stories {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 1fr;
@@ -731,28 +758,10 @@ object {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  padding: 30px; }
-
-.masthead {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row; }
-  .masthead .nav {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    text-align: center; }
-  .masthead .logo {
-    position: absolute;
-    left: 100px;
-    top: 150px; }
+  padding: 10px; }
+  .adventure-stories img {
+    height: auto;
+    width: auto; }
 
 .site-footer {
   background-image: url("../../images/dark-wood.png");
@@ -792,3 +801,26 @@ object {
   text-align: center;
   color: white;
   font-weight: bold; }
+
+.site-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  max-width: 1120px;
+  margin: 0 auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: fixed;
+  width: 100%; }
+
+.site-branding img {
+  width: 100px;
+  height: auto; }

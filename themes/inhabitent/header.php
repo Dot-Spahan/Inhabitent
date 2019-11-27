@@ -26,7 +26,7 @@
 				<div class="site-branding">
 					<img src="<?php echo get_template_directory_uri(); ?>/images/logos/inhabitent-logo-tent-white.svg" alt="Tent Logo">	
 					<h1 class="site-title screen-reader-text"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-					<p class="site-description"><?php bloginfo( 'description' ); ?></p>
+					
 				</div><!-- .site-branding -->
 
 
@@ -36,9 +36,9 @@
 				</nav><!-- #site-navigation -->
 				
 			</header><!-- #masthead -->
+
 			
-			<img src="<?php echo get_template_directory_uri(); ?>/images/logos/inhabitent-logo-full.svg" alt="Tent Logo">	
-			
+		
 			<?php // check if the post has a Post Thumbnail assigned to it.
 			// if ( has_post_thumbnail() ) {
 			// 	the_post_thumbnail();

@@ -3,42 +3,67 @@
 --------------------------------------------------------------*/
 
 /* Front page */
-
-
-.site-content {
-   
-    display:flex;
-  
-
+body {
+   font-family: $font__main;
+    }
+.site-main {
+    display: block;
+    //flex-direction: column;
+    min-width: 1120px;
+}
+.site-content{
+    min-width: 1120px;
+    display: flex;
     .content-area {
-        flex:1;
+
         align-items: center;
         text-align: center;
-
         width: 75%;
+        flex-grow: 1;
         &.bg-red {
-            background-color: #ffffff;
+            background-color: red;
         }
-    }
-
     .widget-area {
         width: 25%;
+        background-color: green;
     }
+
+    }
+     
+    .logo-image {
+    align-items: center;
+    background:  url(../../images/home-hero.jpg) no-repeat top;
+    background-size: cover,cover;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    
+      }
+  
+    }
+  
+    
     .product-types {
+        margin-top: 10px;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: 1fr;
         grid-column-gap: 30px;
         grid-row-gap: 0px;
-        align-items: center;
+        align-content: center;
         text-align: center;
-        padding: 10px;
-        border: solid 1px lightgrey;
-    }
-    
+        padding: 30px;
+        border: solid 10px orange;
+   
+       img {
+           height: auto;
+           width: 100px;
+       }
        
+      
     }
-    
     .btn {
         background-color: #248a83;
         color: white;
@@ -55,7 +80,8 @@
         padding: 10px;
     }
 
-    .adventure-story {
+    .adventure-stories {
+         
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: 1fr;
@@ -63,23 +89,20 @@
         grid-row-gap: 0px;
         align-items: center;
         text-align: center;
-        padding: 30px;
+        padding: 10px;
+        
+        img{
+            height: auto;
+            width: auto;
+        }
+        
     }
 
 
 
-.masthead {
-    flex-direction: row;
-    .nav {
-        display: flex;
-        flex:1;
-        align-items: center;
-        text-align: center;
-     
-        }
-        .logo {
-            position: absolute;
-            left: 100px;
-            top: 150px;
-        }
-}
+
+         
+ 
+
+        
+        

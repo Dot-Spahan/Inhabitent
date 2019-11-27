@@ -28,15 +28,12 @@ a {
 
 .main-navigation {
 	clear: both;
-	display: block;
-	float: left;
-	width: 200px;
 	color: white;
-	align-content: space-between;
-	
+	position: relative;
+	 
 
 	ul {
-		display: none;
+		//display: none;
 		list-style: none;
 		margin: 0;
 		padding-left: 0;
@@ -58,6 +55,7 @@ a {
 				&:hover > ul,
 				&.focus > ul {
 					left: 100%;
+					border: 5px solid red;
 				}
 			}
 
@@ -133,3 +131,4 @@ a {
 		width: 50%;
 	}
 }
+
