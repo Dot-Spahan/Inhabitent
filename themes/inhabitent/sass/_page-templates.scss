@@ -150,6 +150,13 @@ body {
             text-transform: uppercase;
             text-align: left;
         }
+       
+            width: 75%;
+        
+        .widget-area  {
+         width: 25%;
+         border: solid 3px green;
+            }
     }
 
     .adventure-stories {
@@ -179,6 +186,7 @@ body {
     .product-grid {
         display: flex;
         flex-wrap: wrap;
+        flex-grow: 1;
         .product {
             height: auto;
             width: 25%;

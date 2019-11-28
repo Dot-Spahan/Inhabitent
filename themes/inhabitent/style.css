@@ -799,7 +799,8 @@ body {
         -ms-flex-align: center;
             align-items: center;
     text-align: center;
-    padding: 10px; }
+    padding: 10px;
+    width: 75%; }
     .site-content .journal a {
       text-decoration: none;
       background-color: white;
@@ -813,6 +814,9 @@ body {
       font-weight: bold;
       text-transform: uppercase;
       text-align: left; }
+    .site-content .journal .widget-area {
+      width: 25%;
+      border: solid 3px green; }
   .site-content .adventure-stories {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -838,7 +842,10 @@ body {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
-        flex-wrap: wrap; }
+        flex-wrap: wrap;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1; }
     .site-content .product-grid .product {
       height: auto;
       width: 25%; }
