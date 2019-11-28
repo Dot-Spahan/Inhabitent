@@ -1,18 +1,35 @@
+
 .site-header {
     display: flex;
     flex-direction: row;
-    max-width: 1120px;
-    margin: 0 auto;
-    align-items: center;
+    flex-wrap: wrap;
+    max-width: 100%;
+    margin: auto 10px;
+    //align-content: flex-start;
     justify-content: space-between;
-    position: fixed;
-    width:100%;
-}
+    //height: auto;
+    //width: fit-content;
+    img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+    
 
-.site-branding {
+    .site-branding {
     img {
         width: 100px;
         height: auto;
-        
     }
+
+    .main-navigation, .site-branding {
+        position: fixed;
+        z-index: 999;
+       
+    }
+    
 }
+}
+
+ 
+

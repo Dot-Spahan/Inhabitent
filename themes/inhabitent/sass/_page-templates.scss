@@ -6,45 +6,95 @@
 body {
    font-family: $font__main;
     }
-.site-main {
-    display: block;
-    //flex-direction: column;
-    min-width: 1120px;
-}
-.site-content{
-    min-width: 1120px;
-    display: flex;
-    .content-area {
+    .site-main {
+        display: block;
+        max-width: 1120px;
+        }
+        .site-content {
+            max-width: 100%;
+            position: relative;
+            
+            display: block;
+            margin: auto;
+            //overflow: hidden;
+            //border: 5px solid blue;
+            align-items: center;
+            justify-content: center;
+            text-align: left;
+            padding: 20px;
+                .logo-full{
+                position: fixed;
+                z-index: 999;
+                color: white;
+                }
+                 h1, h2{
+                text-transform: uppercase; 
+                text-align: center;
+                }
+                .about-page-banner-image {
+                border: solid 3px purple;
+                height: auto; 
+                width: 100%; 
+                object-fit: cover;
+                }
+           
+        
+       
+        .front-page-top-container {
+            max-width: 100%;
+            position: relative;   
+            display: flex;
+            flex-direction: column;
+            margin: 0 auto;
+            //overflow: hidden;
+            //border: 5px solid yellow;
+            align-items: center;
+            justify-content: center;
+            align-content: flex-start;
+            text-align: left;
+            padding: 20px;
+            h1{
+                position: fixed;
+                z-index: 999;
+                color: white;
+            }
+            h1, h2{
+              text-transform: uppercase; 
+              text-align: center;
+            }
+        
+        
+             .logo-circle{
+                
+                position: absolute;
+                left: -50%;
+                top: -50%;
+                .wp-post-image {
+                    height: 100%; 
+                    width: fit-content; 
+                    object-fit: cover;
+                }
+                
+                
+            }
+        
 
+    .content-area {
+       width: fit-content;
         align-items: center;
-        text-align: center;
+        text-align: left;
         width: 75%;
         flex-grow: 1;
-        &.bg-red {
-            background-color: red;
+            &.about-tent {
+                background-color: white;
+                width: 75%;
+                }
+            .widget-area  {
+             width: 25%;
+             border: solid 3px green;
+                }
         }
-    .widget-area {
-        width: 25%;
-        background-color: green;
-    }
-
-    }
-     
-    .logo-image {
-    align-items: center;
-    background:  url(../../images/home-hero.jpg) no-repeat top;
-    background-size: cover,cover;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    height: 100vh;
-    width: 100%;
-    
-      }
-  
-    }
-  
-    
+   }
     .product-types {
         margin-top: 10px;
         display: grid;
@@ -55,7 +105,14 @@ body {
         align-content: center;
         text-align: center;
         padding: 30px;
-        border: solid 10px orange;
+        //border: solid 10px orange;
+        a {
+            text-decoration: none;
+            background-color: #248a83;
+            color: white;
+            padding: 10px;
+            text-transform: uppercase;
+        }
    
        img {
            height: auto;
@@ -78,6 +135,21 @@ body {
         align-items: center;
         text-align: center;
         padding: 10px;
+        a {
+            text-decoration: none;
+            background-color: white;
+            color: black;
+            border: 1px solid black;
+            padding: 10px;
+            text-transform: uppercase;
+            text-align: left;
+        }
+        h1, h2{
+            font-size: .7rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-align: left;
+        }
     }
 
     .adventure-stories {
@@ -95,12 +167,37 @@ body {
             height: auto;
             width: auto;
         }
+        a {
+            text-decoration: none;
+            background-color: #248a83;
+            color: white;
+            padding: 10px;
+            text-transform: uppercase;
+        }
         
     }
+    .product-grid {
+        display: flex;
+        flex-wrap: wrap;
+        .product {
+            height: auto;
+            width: 25%;
+            .entry-header {
+                height: 230px;
+            }
+            img{
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            
+            }
+        }
+    }
 
-
-
-
+        }
+        
+     
+    
          
  
 

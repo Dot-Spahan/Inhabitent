@@ -9,15 +9,7 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 			
-	<div class="logo-image">
-	<img src="<?php echo get_template_directory_uri(); ?>/images/logos/inhabitent-logo-full.svg" alt="Tent Logo">	
-		</div>		
-			<main id="main" class="site-main" role="main">
-			<?php
-		        if ( has_post_thumbnail() ) {
-			  		the_post_thumbnail();
-			 	}
-			?>
+
 
 			<?php while ( have_posts() ) : the_post(); ?>
 
